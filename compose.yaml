@@ -1,0 +1,22 @@
+services:
+  flowdesk:
+    build: .
+    ports:
+      - "127.0.0.1:${HOST_PORT:-8766}:8766"
+    environment:
+      DATA_DIR: /app/data
+      DEMO_MODE: ${DEMO_MODE:-true}
+      WEBHOOK_TOKEN: ${WEBHOOK_TOKEN:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_CHAT_MODEL: ${OPENAI_CHAT_MODEL:-}
+    volumes:
+      - flowdesk_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8766/api/status', timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+volumes:
+  flowdesk_data:

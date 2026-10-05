@@ -1,0 +1,17 @@
+[Unit]
+Description=Flowdesk AI workflow portfolio demo
+After=network.target ai-rag-llm.service
+Wants=ai-rag-llm.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/apps/ai-workflow-automation
+EnvironmentFile=/home/ubuntu/apps/ai-workflow-automation/.env
+ExecStart=/home/ubuntu/apps/ai-workflow-automation/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8766 --workers 1
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
