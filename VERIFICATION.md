@@ -37,7 +37,7 @@
 
 旧版模型路径的数据库与源码也保留在同目录 `backups/`。回退方法见 [DEPLOYMENT.md](DEPLOYMENT.md)。
 
-## 外部交付边界
+## 公开交付与边界
 
-- 独立 GitHub 仓库尚未发布：当前机器的 `gh` 未登录。源码已可本地运行和归档，但不能给出未创建的仓库链接。
+- 独立 GitHub 仓库已于 2026-10-06 发布：[sowapolo425-art/ai-workflow-automation](https://github.com/sowapolo425-art/ai-workflow-automation)。发布前检查了跟踪文件与密钥相关文本；`.env`、数据库和运行数据不在仓库中。
 - 当前服务器仅有 IP/HTTP，没有域名与 HTTPS；公开演示只能使用虚构样本。

@@ -4,7 +4,7 @@
 
 ![Flowdesk 页面](screenshot.png)
 
-**当前交付状态（2026-10-06）：** 本地 Docker 已验证，广州服务器独立服务已运行并完成四个虚构场景；腾讯云防火墙已放行 TCP 8766，公网演示页面与 API 已从服务器外部验收。打开 [在线演示](http://139.199.90.153:8766/)；详情与回退证据见 [VERIFICATION.md](VERIFICATION.md)。当前地址仅提供 IP/HTTP，限虚构样本演示。
+**当前交付状态（2026-10-06）：** 本地 Docker 已验证，广州服务器独立服务已运行并完成四个虚构场景；腾讯云防火墙已放行 TCP 8766，公网演示页面与 API 已从服务器外部验收。打开 [在线演示](http://139.199.90.153:8766/)或查看[公开源码仓库](https://github.com/sowapolo425-art/ai-workflow-automation)；详情与回退证据见 [VERIFICATION.md](VERIFICATION.md)。当前演示地址仅提供 IP/HTTP，限虚构样本使用。
 
 ## 亲自体验
 
